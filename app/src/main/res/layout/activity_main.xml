@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/indian_red"
     tools:context=".MainActivity"
     android:orientation="vertical">
     <TextView
@@ -29,7 +30,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:backgroundTint="#ff0"
+        android:background="@color/white"
         >
 
         <TableLayout
@@ -38,11 +39,12 @@
 
             <TableRow>
                 <Button
-                    style="@style/digitbutton"
-                    android:text="AC"/>
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:text="AC"/>
+                <Button
+                    style="@style/digitbutton"
                     android:text="Clr"/>
                 <Button
                     android:layout_width="wrap_content"
@@ -60,9 +62,9 @@
 
             </TableRow>
             <TableRow>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitbutton"
+                    android:textSize="30dp"
                     android:text="7"/>
                 <Button
                     android:layout_width="wrap_content"
