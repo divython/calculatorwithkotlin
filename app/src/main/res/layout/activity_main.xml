@@ -4,163 +4,254 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/indian_red"
+    android:background="@color/medium_orchid"
     tools:context=".MainActivity"
     android:orientation="vertical">
     <TextView
       android:layout_width="match_parent"
-      android:layout_height= "300dp"
-      android:text="Hello World!"
+      android:layout_height= "wrap_content"
+      android:text="CALCULATOR"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"/>
     <TextView
+        android:id="@+id/text1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="ANSWER"
+        android:layout_height="100dp"
+        android:text=""
         android:textColor="@color/black"
         android:textAlignment="textEnd"
         android:gravity="bottom"
         android:textSize="40dp"
         tools:ignore="RtlCompat" />
-    <LinearLayout
+    <TextView
+        android:id="@+id/answer"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        >
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:backgroundTint="@color/forest_green"
-        android:layout_margin="10dp"
-        />
-        
-
-
-    </LinearLayout>
-    <LinearLayout
+        android:layout_height="100dp"
+        android:text=""
+        android:textSize="30dp"
+        android:textColor="@color/light_grey"
+        android:textAlignment="textEnd"
+        android:gravity="bottom"
+        tools:ignore="RtlCompat" />
+    <View
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        >
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
+        android:layout_height="1dp"
+        android:background="@color/wheat"/>
 
 
-
-    </LinearLayout>
     <LinearLayout
+        android:id="@+id/linearlayout1"
+
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:background="@color/white"
+        android:orientation="vertical"
+        android:background="@color/medium_orchid"
         >
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_7"
+
+                style="@style/digitbutton"
+                android:layout_margin="5dp"
+                android:text="7"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+                android:id="@+id/btn_8"
+                style="@style/digitbutton"
+                android:layout_margin="5dp"
+                android:text="8"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+            style="@style/digitbutton"
+            android:layout_margin="5dp"
+            android:text="9"
+                android:id="@+id/btn_9"
+
+            android:onClick="ondigitclick"
             />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
+            <com.google.android.material.button.MaterialButton
+
+
+                android:id="@+id/btn_back"
+
+                style="@style/operatorbutton"
+                android:layout_margin="5dp"
+                app:icon="@drawable/baseline_backspace_24"
+                app:iconTint="@color/black"
+
+                android:onClick="onbackclick"
             />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_Clear"
+
+                style="@style/operatorbutton"
+                android:layout_margin="5dp"
+                android:text="C"
+                android:onClick="onclearclick"
+                />
 
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        >
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
+        </LinearLayout>
+        <LinearLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_4"
+
+                style="@style/digitbutton"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_5"
+
+                style="@style/digitbutton"
+                android:layout_margin="5dp"
+                android:text="5"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_6"
+
+                style="@style/digitbutton"
+                android:layout_margin="5dp"
+                android:text="6"
+                android:onClick="ondigitclick"
+                /><com.google.android.material.button.MaterialButton
+
+            style="@style/operatorbutton"
+            android:id="@+id/btn_plus"
+            android:layout_margin="5dp"
+            android:text="+"
+            android:onClick="onoperatorclick"
             />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:id="@+id/btn_minus"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:onClick="onoperatorclick"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/digitbutton"
+                android:id="@+id/btn_1"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/digitbutton"
+                android:id="@+id/btn_2"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/digitbutton"
+                android:id="@+id/btn_3"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+            style="@style/operatorbutton"
+            android:id="@+id/btn_multiply"
+            android:layout_margin="5dp"
+            android:text="*"
+            android:onClick="onoperatorclick"
             />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:id="@+id/btn_divide"
+                android:layout_margin="5dp"
+                android:text="/"
+                android:onClick="onoperatorclick"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:layout_margin="5dp"
+                android:id="@+id/btn_decimal"
+                android:text="."
+                android:onClick="ondigitclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:layout_margin="5dp"
+                android:id="@+id/btn_0"
+                android:text="0"
+                android:onClick="onoperatorclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:layout_margin="5dp"
+                android:text="%"
+                android:id="@+id/btn_percentage"
+                android:onClick="onoperatorclick"
+                />
+            <com.google.android.material.button.MaterialButton
+
+            style="@style/operatorbutton"
+            android:layout_margin="5dp"
+            android:id="@+id/btn_ALL_CLEAR"
+            android:text="AC"
+            android:onClick="onallclearclick"
             />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:backgroundTint="@color/forest_green"
-            android:layout_margin="10dp"
-            />
+            <com.google.android.material.button.MaterialButton
+
+                style="@style/operatorbutton"
+                android:id="@+id/btn_equal"
+                android:layout_margin="5dp"
+                android:text="="
+                android:onClick="onequalclick"
+                />
+
+
+
+        </LinearLayout>
+
 
 
 
